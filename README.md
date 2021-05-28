@@ -3,6 +3,8 @@
 Yes, this could all be combined differently, but I like to mix shell and python.
 
 # build/run
+copy the crypto.env.template to crypto.env and update with your information
+
 ```
 docker build -t auto_crypto .
 ```
