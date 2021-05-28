@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 dprint() {
-    echo -e "`date` ---> ${@}" 2>&1 |tee -a /var/log/crypto.log
+    echo -e "`date` ---> ${@}" 2>&1
 }
 
 # source the env file (should be copy of crypto.env.template)
