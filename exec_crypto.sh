@@ -5,6 +5,12 @@ dprint() {
 }
 
 # source the env file (should be copy of crypto.env.template)
+if [ ! -e crypto.env ]; then
+  dprint "ERROR: missing crypto.env file"
+  exit 1
+fi
+
+# source the env file
 source crypto.env
 
 # get the day of the year so we can figure out every n'th day
@@ -27,6 +33,9 @@ for C in $CRYPTO_LIST; do
         # deposit the buy amount
         dprint "Depositing ${!AMT}"
         $cmd --action deposit --amount ${!AMT}
+
+        dprint "Pausing for 10s ..."
+        sleep 10
 
         # buy the amount
         dprint "Purchasing ${!AMT} of $C"
