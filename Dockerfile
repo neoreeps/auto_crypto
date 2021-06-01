@@ -1,10 +1,9 @@
 FROM python:3.8-alpine
 
 # Mountpoints for configuration & certificates
-#VOLUME /conf
-#VOLUME /certs
+#VOLUME /var/log
 
-# Copy appdaemon into image
+# Copy code into image
 WORKDIR /opt/apps
 COPY crontab start.sh crypto.env crypto.py exec_crypto.sh /opt/apps/
 
