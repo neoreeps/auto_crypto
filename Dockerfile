@@ -5,7 +5,7 @@ FROM python:3.8-alpine
 
 # Copy code into image
 WORKDIR /opt/apps
-COPY crontab start.sh crypto.env crypto.py exec_crypto.sh /opt/apps/
+COPY crontab start.sh crypto.py exec_crypto.sh /opt/apps/
 
 # Install timezone data
 RUN apk add tzdata

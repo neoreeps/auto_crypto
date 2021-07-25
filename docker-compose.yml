@@ -7,7 +7,8 @@ services:
     restart: always
     image: crypto
     volumes:
-      - ./logs:/var/log
+      - /data/apps/auto_crypto/logs:/var/log
+      - /data/apps/auto_crypto/crypto.env:/opt/apps/crypto.env
 
 volumes:
   logs:
